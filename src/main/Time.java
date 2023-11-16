@@ -49,7 +49,8 @@ public class Time {
 
     @Override
     public String toString() {
-        return String.format("%02d:%02d:%02d %s", getHour(), getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
+        return String.format("%02d:%02d:%02d %s", (getHour() == 0 || getHour() == 12 ? 12 : getHour() % 12),
+                getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
     }
 
     @Override
