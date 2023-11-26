@@ -1,6 +1,9 @@
 package main;
 
 public class Time {
+    public static final int MINUTES_PER_HOUR = 60;
+    public static final int SECONDS_PER_HOUR = 3600;
+
     private int seconds;
 
     public Time(int hour, int minute, int second) {
@@ -44,7 +47,11 @@ public class Time {
             throw new IllegalArgumentException("Hour must be between 0 and 59!");
         }
 
-        this.seconds = hour * 3600 + minute * 60 + second;
+        this.seconds = getSecondsSinceMidnight(hour, minute, second);
+    }
+
+    public static int getSecondsSinceMidnight(int hour, int minute, int second) {
+        return hour * SECONDS_PER_HOUR + minute * MINUTES_PER_HOUR + second;
     }
 
     @Override
