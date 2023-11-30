@@ -1,9 +1,16 @@
 package test;
 
 import main.Time;
+import main.Date;
 
 public class TimeTest {
     public static void main(String[] args) {
+        System.out.println(Date.computeLastDay(2, 2023));
+
+        Date date = new Date(11, 7, 2023);
+        System.out.println(date.computeLastDay(2, 2024));
+
+
         int h = 7;
         int m = 45;
         int s = 40;

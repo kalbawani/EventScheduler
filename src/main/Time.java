@@ -11,6 +11,7 @@ public class Time {
     }
 
     public Time(int hour, int minute) {
+
         this(hour, minute, 0);
     }
 

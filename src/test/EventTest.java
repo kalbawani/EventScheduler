@@ -1,27 +1,22 @@
 package test;
 
-import main.Time;
-import main.Date;
-import main.Location;
-import main.Room;
-import main.Employee;
-import main.Event;
+import main.*;
 
 public class EventTest {
     public static void main(String[] args) {
-        Time time = new Time(11,0);
-        Date date = new Date(12, 11, 2023);
+        Date date = new Date(27, 11, 2023);
+        Time time = new Time(8,0);
+        Location location = new Location("Adickesallee", 32, 3);
+        Room room = new Room("S3.03", location, 20);
+        Employee employee = new Employee(111, "Will", "Smith", "w.smith@fs.de");
 
-        Location location = new Location("Adickesallee", 32, 1);
-        Room room = new Room("S1.12", location, 20);
-        Employee employee = new Employee(232, "Will", "Smith", "w.smith@fs.de");
-
-        Event event = new Event(1, "Introduction to Programming", date, time, room, 30, employee);
-
+        Event event = new Event(111, "zzz", date);
         System.out.println(event);
 
-        date.setDate(18, 12, 2023);
+        System.out.println();
 
-        System.out.println(event);
+        DeadlineEvent deadline = new DeadlineEvent(111, "Assignment 10", date, time);
+
+        System.out.println(deadline);
     }
 }
