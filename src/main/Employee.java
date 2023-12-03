@@ -33,7 +33,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s (ID: %d, Email: %s)", firstName, lastName, id, email);
+        return String.format("%s %s (ID: %d, Email: %s)",
+                getFirstName(), getLastName(), getId(), getEmail());
     }
 
     @Override

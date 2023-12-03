@@ -27,7 +27,8 @@ public class Location {
 
     @Override
     public String toString() {
-        return String.format("%s %d, floor %d", street, building, floor);
+        return String.format("%s %d, floor %d",
+                getStreet(), getBuilding(), getFloor());
     }
 
     @Override

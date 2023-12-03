@@ -27,7 +27,8 @@ public class Room {
 
     @Override
     public String toString() {
-        return String.format("%s (capacity: %d, location: %s)", number, capacity, location);
+        return String.format("%s (capacity: %d, location: %s)",
+                getNumber(), getCapacity(), getLocation());
     }
 
     @Override

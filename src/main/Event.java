@@ -29,7 +29,7 @@ public class Event {
     public String toString() {
         return String.format("%s (ID: %d)" +
                         "%n    Date: %s"
-                , name, id, date);
+                , getName(), getId(), getDate());
     }
 
     @Override

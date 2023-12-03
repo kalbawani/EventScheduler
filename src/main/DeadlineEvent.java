@@ -17,6 +17,6 @@ public class DeadlineEvent extends Event {
         return super.toString() +
                 String.format(
                         "%n    Time: %s"
-                        , time);
+                        , getTime());
     }
 }

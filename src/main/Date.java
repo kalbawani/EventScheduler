@@ -70,7 +70,7 @@ public class Date {
 
     @Override
     public String toString() {
-        return String.format("%02d.%02d.%04d", day, month, year);
+        return String.format("%02d.%02d.%04d", getDay(), getMonth(), getYear());
     }
 
     @Override
