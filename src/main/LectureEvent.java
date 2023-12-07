@@ -19,6 +19,12 @@ public class LectureEvent extends RoomEvent {
     }
 
     @Override
+    public int getEventLength() {
+        int duration = super.getEventLength();
+        return duration / 60;
+    }
+
+    @Override
     public String toString() {
         return super.toString() +
                 String.format(

@@ -1,10 +1,12 @@
 package main;
 
+import java.util.*;
+
 public class MeetingEvent extends RoomEvent {
     private Employee organizer;
-    private Employee[] guestList;
+    private ArrayList<Employee> guestList;
 
-    public MeetingEvent(int id, String name, Date date, Time startTime, Time endTime, Room room, Employee organizer, Employee[] guestList) {
+    public MeetingEvent(int id, String name, Date date, Time startTime, Time endTime, Room room, Employee organizer, ArrayList<Employee> guestList) {
         super(id, name, date, startTime, endTime, room);
         this.organizer = organizer;
         this.guestList = guestList;
@@ -14,7 +16,7 @@ public class MeetingEvent extends RoomEvent {
         return organizer;
     }
 
-    public Employee[] getGuestList() {
+    public ArrayList<Employee> getGuestList() {
         return guestList;
     }
 

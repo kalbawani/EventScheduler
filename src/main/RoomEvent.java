@@ -25,6 +25,16 @@ public class RoomEvent extends Event {
     }
 
     @Override
+    public int getEventLength() {
+        Time startTime = getStartTime();
+        Time endTime = getEndTime();
+        int startTimeInSeconds = startTime.getSecondsSinceMidnight(startTime.getHour(), startTime.getMinute(), startTime.getSecond());
+        int endTimeInSeconds = endTime.getSecondsSinceMidnight(endTime.getHour(), endTime.getMinute(), endTime.getSecond());
+        int duration = endTimeInSeconds - startTimeInSeconds;
+        return duration / 60;
+    }
+
+    @Override
     public String toString() {
         return super.toString() +
                 String.format(

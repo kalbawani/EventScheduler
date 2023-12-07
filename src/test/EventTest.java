@@ -1,6 +1,10 @@
 package test;
 
 import main.*;
+import main.Date;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EventTest {
     public static void main(String[] args) {
@@ -19,7 +23,10 @@ public class EventTest {
         Time endTime = new Time(9,30);
         Employee manager = new Employee(123, "Tom", "Cruise", "tc@fs.de");
         Employee dean = new Employee(124, "Robert", "De Niro", "rd@fs.de");
-        Employee[] guestList = {manager, dean, employee};
+
+        Employee[] list = {employee, dean, manager};
+
+        ArrayList<Employee> guestList = new ArrayList<>(Arrays.asList(employee, dean, manager));
 
         MeetingEvent meeting = new MeetingEvent(222, "Weekly Meeting", date, startTime, endTime, room, employee, guestList);
 

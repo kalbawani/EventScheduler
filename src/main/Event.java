@@ -25,6 +25,12 @@ public class Event {
         return date;
     }
 
+    // Returns the duration of the event in minutes.
+    //For lecture events, the duration should be in hours.
+    public int getEventLength() {
+        return 0;
+    }
+
     @Override
     public String toString() {
         return String.format("%s (ID: %d)" +
